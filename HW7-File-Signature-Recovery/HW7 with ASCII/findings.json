@@ -1,0 +1,240 @@
+{
+  "scan_info": {
+    "image_path": "evidence.img",
+    "image_size": 524288,
+    "image_sha256": "4faa6236c18577909f61fa595b9401bc3439a74be1e020f3f3b902f13f91d095",
+    "scan_timestamp": "2026-11-10T10:05:38+07:00",
+    "tool_version": "2.0",
+    "read_mode": "rb"
+  },
+  "signature_matches": [
+    {
+      "format": "JPEG",
+      "magic_hex": "FF D8 FF",
+      "offset": 2048,
+      "offset_hex": "0x00000800",
+      "extension": ".jpg"
+    },
+    {
+      "format": "PDF",
+      "magic_hex": "25 50 44 46",
+      "offset": 16384,
+      "offset_hex": "0x00004000",
+      "extension": ".pdf"
+    },
+    {
+      "format": "ELF",
+      "magic_hex": "7F 45 4C 46",
+      "offset": 26624,
+      "offset_hex": "0x00006800",
+      "extension": ".elf"
+    },
+    {
+      "format": "ZIP",
+      "magic_hex": "50 4B 03 04",
+      "offset": 28672,
+      "offset_hex": "0x00007000",
+      "extension": ".zip"
+    },
+    {
+      "format": "ZIP",
+      "magic_hex": "50 4B 03 04",
+      "offset": 28808,
+      "offset_hex": "0x00007088",
+      "extension": ".zip"
+    },
+    {
+      "format": "PNG",
+      "magic_hex": "89 50 4E 47",
+      "offset": 36864,
+      "offset_hex": "0x00009000",
+      "extension": ".png"
+    },
+    {
+      "format": "PDF",
+      "magic_hex": "25 50 44 46",
+      "offset": 45056,
+      "offset_hex": "0x0000B000",
+      "extension": ".pdf"
+    },
+    {
+      "format": "JPEG",
+      "magic_hex": "FF D8 FF",
+      "offset": 57344,
+      "offset_hex": "0x0000E000",
+      "extension": ".jpg"
+    }
+  ],
+  "carving_results": [
+    {
+      "format": "JPEG",
+      "offset_start": 2048,
+      "offset_end": 3309,
+      "size_bytes": 1262,
+      "filename": "recovered/recovered_001.jpg",
+      "sha256": "b430a365a194c9dfe9ecb2813a0467d48c78fbc5f374963d63a4008359d0eb5c",
+      "status": "complete",
+      "details": {
+        "width": 64,
+        "height": 64,
+        "components": 1,
+        "sof_marker": "0xC0",
+        "header_gap_bytes": 4
+      },
+      "reason": "JPEG SOF/SOS validated and EOI footer found",
+      "recovery_timestamp": "2026-11-10T10:05:38+07:00",
+      "save_note": "File saved"
+    },
+    {
+      "format": "PDF",
+      "offset_start": 16384,
+      "offset_end": 17175,
+      "size_bytes": 792,
+      "filename": "recovered/recovered_002.pdf",
+      "sha256": "799cc2e0490bde7115f4e637584d16f2d6f27f41338b1d3c90228c1df8f1289d",
+      "status": "complete",
+      "details": {
+        "pdf_version": "1.7"
+      },
+      "reason": "PDF version header and %%EOF footer found",
+      "recovery_timestamp": "2026-11-10T10:05:38+07:00",
+      "save_note": "File saved"
+    },
+    {
+      "format": "ELF",
+      "offset_start": 26624,
+      "offset_end": 26751,
+      "size_bytes": 128,
+      "filename": "recovered/recovered_003.elf",
+      "sha256": "fb576091ad47db88c14b293753291201887d59576bdb972d0949187cdfac8ff9",
+      "status": "complete",
+      "details": {
+        "elf_class": "ELF64",
+        "endianness": "little",
+        "machine": 62,
+        "elf_type": 2,
+        "entry_point": 4198400,
+        "program_header_count": 1,
+        "section_header_count": 0,
+        "derived_size": 128
+      },
+      "reason": "ELF size derived from header/table/segment extents",
+      "recovery_timestamp": "2026-11-10T10:05:38+07:00",
+      "save_note": "File saved"
+    },
+    {
+      "format": "ZIP",
+      "offset_start": 28672,
+      "offset_end": 29024,
+      "size_bytes": 353,
+      "filename": "recovered/recovered_004.zip",
+      "sha256": "cfc3c40ea346973a6924344df14acb19a5bb499a3b75e7efb2ac1cdd77765e5c",
+      "status": "complete",
+      "details": {
+        "entry_count": 2,
+        "entries": [
+          {
+            "filename": "readme.txt",
+            "compressed_size": 96,
+            "uncompressed_size": 100,
+            "compression_method": 8,
+            "local_header_offset": 0
+          },
+          {
+            "filename": "data.csv",
+            "compressed_size": 47,
+            "uncompressed_size": 45,
+            "compression_method": 8,
+            "local_header_offset": 136
+          }
+        ],
+        "central_directory_offset": 221,
+        "central_directory_size": 110,
+        "eocd_offset": 29003
+      },
+      "reason": "ZIP EOCD and central directory are structurally consistent",
+      "recovery_timestamp": "2026-11-10T10:05:38+07:00",
+      "save_note": "File saved"
+    },
+    {
+      "format": "PNG",
+      "offset_start": 36864,
+      "offset_end": 39243,
+      "size_bytes": 2380,
+      "filename": "recovered/recovered_005.png",
+      "sha256": "50f78d1ddb752facdad4733a314d624de837e26d6d00c6cdf090139a836f500a",
+      "status": "complete",
+      "details": {
+        "width": 32,
+        "height": 32,
+        "chunks": [
+          "IHDR",
+          "tEXt",
+          "IDAT",
+          "IEND"
+        ],
+        "crc_errors": []
+      },
+      "reason": "PNG chunks and CRC values are valid",
+      "recovery_timestamp": "2026-11-10T10:05:38+07:00",
+      "save_note": "File saved"
+    },
+    {
+      "format": "PDF",
+      "offset_start": 45056,
+      "offset_end": null,
+      "size_bytes": 0,
+      "filename": null,
+      "sha256": null,
+      "status": "failed",
+      "details": {},
+      "reason": "Raw %PDF bytes found, but the required %PDF-x.y header is invalid",
+      "recovery_timestamp": "2026-11-10T10:05:38+07:00"
+    },
+    {
+      "format": "JPEG",
+      "offset_start": 57344,
+      "offset_end": 66806,
+      "size_bytes": 9463,
+      "filename": "recovered/recovered_006.jpg",
+      "sha256": "03ec5a46324e52b8fef2d2b0ec1a02b0e36f5178f5c07b259ba42e40bd4db2f1",
+      "status": "complete",
+      "details": {
+        "width": 32,
+        "height": 32,
+        "components": 1,
+        "sof_marker": "0xC0",
+        "header_gap_bytes": 4
+      },
+      "reason": "JPEG SOF/SOS validated and EOI footer found",
+      "recovery_timestamp": "2026-11-10T10:05:38+07:00",
+      "save_note": "File saved"
+    }
+  ],
+  "skipped_signatures": [
+    {
+      "format": "ZIP",
+      "offset": 28808,
+      "offset_hex": "0x00007088",
+      "reason": "Signature is inside an already validated ZIP archive; not a separate file"
+    }
+  ],
+  "additional_structural_observations": [
+    {
+      "candidate_offset": 45056,
+      "candidate_offset_hex": "0x0000B000",
+      "pe_signature_offset": 45184,
+      "pe_signature_offset_hex": "0x0000B080",
+      "e_lfanew": 128,
+      "observation": "e_lfanew points to PE\u0000\u0000, but the required DOS MZ bytes are absent"
+    }
+  ],
+  "summary": {
+    "total_signatures_found": 8,
+    "complete_recoveries": 6,
+    "partial_recoveries": 0,
+    "failed_recoveries": 1,
+    "new_files_written": 6,
+    "skipped_nested_signatures": 1
+  }
+}
