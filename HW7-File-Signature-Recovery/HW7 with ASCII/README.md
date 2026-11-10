@@ -20,6 +20,7 @@ Versi ini menggunakan antarmuka terminal interaktif. Saat program dijalankan, ap
 3. **STEP 2 – FILE SIGNATURE SCANNER**
    <img width="741" height="638" alt="image" src="https://github.com/user-attachments/assets/0258448c-92da-4bf6-b049-cee1083fb190" />
 5. **STEP 3 – FILE RECOVERY / CARVING**
+   
    <img width="547" height="488" alt="image" src="https://github.com/user-attachments/assets/b80f36ea-8a64-4d7b-bc40-c8138a76ed1a" />
 Urutan menu membantu pengguna memahami proses pemeriksaan. Program membaca image menggunakan mode `rb` (*read binary*) dan tidak menulis atau mengubah `evidence.img`.
 
