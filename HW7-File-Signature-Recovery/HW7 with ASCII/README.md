@@ -12,6 +12,7 @@
 Digital Forensics File Recovery Tool (DFR) adalah aplikasi Python untuk memeriksa raw disk image, menemukan file signature (magic bytes), dan mencoba mengekstrak file berdasarkan struktur formatnya.
 
 Versi ini menggunakan antarmuka terminal interaktif. Saat program dijalankan, aplikasi menampilkan ASCII banner DFR, informasi singkat mengenai tool, dan menu tiga tahapan:
+
 <img width="723" height="347" alt="image" src="https://github.com/user-attachments/assets/b48cc72b-0363-48e7-96a4-b877c0e3a3d6" />
 
 1. **STEP 1 – IMAGE INFORMATION & INTEGRITY**
