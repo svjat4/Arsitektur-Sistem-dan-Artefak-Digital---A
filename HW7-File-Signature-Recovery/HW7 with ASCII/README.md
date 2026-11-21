@@ -68,15 +68,16 @@ HW7-File-Signature-Recovery/
 ├── recovery_log.json
 ├── README.md
 └── recovered/
-    ├── recovered_001.jpg
-    ├── recovered_002.pdf
-    ├── recovered_003.elf
-    ├── recovered_004.zip
-    ├── recovered_005.png
-    └── recovered_006.jpg
+    ├── file_001.jpg
+    ├── file_002.pdf
+    ├── file_003.elf
+    ├── file_004.zip
+    ├── file_005.png
+    └── file_006.jpg
 ```
 
 Keenam nama file di atas adalah hasil pemeriksaan terhadap `evidence.img` yang disertakan dalam proyek ini. Jika image diganti, jumlah, jenis, dan nama hasil recovery dapat berbeda.
+Pola nama `file_001.jpg`, `file_002.pdf`, dan seterusnya mengikuti contoh struktur folder `recovered/` pada halaman 1 PDF instruksi HW7.
 
 Keterangan file keluaran:
 
@@ -194,7 +195,7 @@ Satu jenis signature dapat ditemukan lebih dari sekali. Jumlah signature karena 
 
 ### STEP 3 – FILE RECOVERY / CARVING
 
-Setelah Step 2 selesai, pilih `3`. Program mengevaluasi kandidat dan menentukan rentang byte berdasarkan struktur masing-masing format. Hasil yang memenuhi kondisi ekstraksi ditulis ke folder `recovered/` dengan pola nama `recovered_001.ext`, `recovered_002.ext`, dan seterusnya.
+Setelah Step 2 selesai, pilih `3`. Program mengevaluasi kandidat dan menentukan rentang byte berdasarkan struktur masing-masing format. Hasil yang memenuhi kondisi ekstraksi ditulis ke folder `recovered/` dengan pola nama `file_001.ext`, `file_002.ext`, dan seterusnya.
 
 Algoritma batas file yang digunakan:
 
@@ -276,12 +277,12 @@ Pada pemeriksaan image contoh berukuran 524.288 byte (512 KiB), hasil yang terca
 
 Enam file yang berhasil diekstrak pada image contoh adalah:
 
-1. `recovered_001.jpg`
-2. `recovered_002.pdf`
-3. `recovered_003.elf`
-4. `recovered_004.zip`
-5. `recovered_005.png`
-6. `recovered_006.jpg`
+1. `file_001.jpg`
+2. `file_002.pdf`
+3. `file_003.elf`
+4. `file_004.zip`
+5. `file_005.png`
+6. `file_006.jpg`
 
 Satu kecocokan ZIP kedua berada di dalam arsip ZIP pertama sehingga tidak diperlakukan sebagai arsip terpisah. Satu kecocokan `%PDF` tidak lolos validasi header versi dan tidak memiliki footer `%%EOF`, sehingga recovery dinyatakan `failed`.
 

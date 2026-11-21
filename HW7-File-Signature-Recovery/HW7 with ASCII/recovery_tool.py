@@ -576,7 +576,7 @@ def save_recovered_content(content: bytes, extension: str, sequence: int,
 
     candidate = sequence
     while True:
-        filename = "recovered_{:03d}{}".format(candidate, extension)
+        filename = "file_{:03d}{}".format(candidate, extension)
         output_path = recovered_dir / filename
         if not output_path.exists():
             with output_path.open("xb") as output_file:
@@ -794,7 +794,7 @@ def perform_recovery(image_data: bytes,
     skipped: List[Dict[str, Any]] = []
     claimed_zip_ranges: List[Tuple[int, int]] = []
     seen_hashes: Dict[str, str] = {}
-    for existing_file in sorted(recovered_dir.glob("recovered_*")):
+    for existing_file in sorted(recovered_dir.glob("file_*")):
         if existing_file.is_file():
             seen_hashes[sha256_file(existing_file)] = existing_file.name
 
@@ -988,9 +988,6 @@ def main() -> int:
             print("\nKeluar dari aplikasi.")
             return 0
 
-
-if __name__ == "__main__":
-    sys.exit(main())
 
 if __name__ == "__main__":
     sys.exit(main())
